@@ -6,29 +6,59 @@ body {
     font-family: Arial, sans-serif;
     background-color: black;
     color: white;
+    background: url('../components/assests/portfolio-bg.webp') no-repeat center fixed;
+    background-size: cover;
+    animation: bgZoom 10s infinite alternate ease-in-out;
 }
-
+body * {
+    color: white;
+    /* Adjust text color for readability */
+    z-index: 1;
+}
+/* @keyframes bgZoom { */
+    /* 0% { */
+        /* transform: scale(1); */
+    /* } */
+/*  */
+    /* 100% { */
+        /* transform: scale(1.1); */
+    /* } */
+/* } */
 /* Navigation bar */
 .navbar {
     display: flex;
     justify-content: flex-end;
+    /* Aligns the items to the right */
     align-items: center;
     padding: 20px;
     gap: 20px;
+    position: absolute;
+    /* Position the navbar in the top-right corner */
+    top: 14px;
+    right: 0;
+    width: 100%;
+    /* Ensures it spans the full width */
+    z-index: 10;
+    /* Ensures it appears above other content */
 }
 
+/* Navbar links */
 .navbar a {
     color: white;
     text-decoration: none;
     font-weight: bold;
     position: relative;
     padding-bottom: 4px;
+    font-size: 18px;
+    /* Optional: adjust the font size as needed */
 }
 
+/* Hover effect on the links */
 .navbar a:hover {
     color: red;
 }
 
+/* Underline effect on hover */
 .navbar a::after {
     content: '';
     position: absolute;
@@ -40,6 +70,7 @@ body {
     transition: width 0.3s ease;
 }
 
+/* Expands the underline when hovered */
 .navbar a:hover::after {
     width: 100%;
 }
@@ -54,7 +85,7 @@ body {
 
 .left-side img {
     width: 300px;
-    border-radius: 50%;
+    border-radius: 10%;
 }
 
 .right-side {
@@ -66,6 +97,33 @@ body {
     animation: fadeInOut 3s infinite;
 }
 
+/* Align image and text side by side */
+.home-content {
+    display: flex;
+    align-items: center;
+}
+
+/* Style for the profile picture */
+.profile-pic {
+    width: 350px;
+    /* Adjust size as needed */
+    height: 500px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 40px;
+    /* Space between image and text */
+}
+
+/* Style for the introduction text */
+.intro-text {
+    color: white;
+}
+
+.intro-text .highlight {
+    color: red;
+    font-size: 2rem;
+    font-weight: bold;
+}
 /* Loading Animation */
 .loading-container {
     display: flex;
@@ -79,7 +137,7 @@ body {
 .loading-text {
     font-size: 4rem;
     font-weight: bold;
-    color: blue;
+    color: rgb(223, 8, 8);
     animation: fadeInOut 2s infinite;
 }
 
