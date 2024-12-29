@@ -1,11 +1,41 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "../styles/styles.css";
-import Typewriter from "typewriter-effect"; 
+import Typewriter from "typewriter-effect"; // Import Typewriter library
 import Mypic from "./assests/Abhi.JPG";
 
 const Home = () => {
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+
+  // Update mouse position when the mouse moves
+  useEffect(() => {
+    const handleMouseMove = (e) => {
+      setMousePosition({ x: e.clientX, y: e.clientY });
+    };
+    window.addEventListener("mousemove", handleMouseMove);
+
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+    };
+  }, []);
+
   return (
     <div className="container">
+      {/* Mouse Tracker */}
+      <div
+        className="mouse-tracker-dot"
+        style={{
+          left: `${mousePosition.x}px`,
+          top: `${mousePosition.y}px`,
+        }}
+      ></div>
+      <div
+        className="mouse-tracker-circle"
+        style={{
+          left: `${mousePosition.x}px`,
+          top: `${mousePosition.y}px`,
+        }}
+      ></div>
+
       {/* Left side: Profile Image */}
       <div className="left-side">
         <img src={Mypic} alt="Abhishek Duggal" className="profile-pic" />

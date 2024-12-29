@@ -153,6 +153,33 @@ body * {
     }
 }
 
+/* Mouse Tracker - Red Dot */
+.mouse-tracker-dot {
+    position: fixed;
+    width: 8px;
+    height: 8px;
+    background-color: red;
+    border-radius: 50%;
+    pointer-events: none;
+    /* Prevent interference with mouse events */
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    /* Ensure it's on top of everything */
+}
+
+/* Mouse Tracker - Red Circle */
+.mouse-tracker-circle {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    border: 2px solid red;
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 9998;
+    /* Ensure it's just below the dot */
+}
+
 
 
 
