@@ -9,11 +9,13 @@ const Services = () => {
         <div className="service-box" id="box-1">
           <div className="box-content">
             <p>Website from Scratch</p>
+            <div className="box-hover-text">Click here to proceed</div>
           </div>
         </div>
         <div className="service-box" id="box-2">
           <div className="box-content">
             <p>Updating the existing website</p>
+            <div className="box-hover-text">Click here to proceed</div>
           </div>
         </div>
         <div className="service-box" id="box-3">
@@ -33,6 +35,7 @@ const Services = () => {
         <div className="service-box" id="box-4">
           <div className="box-content">
             <p>Collaboration</p>
+            <div className="box-hover-text">Click here to proceed</div>
           </div>
         </div>
       </section>
