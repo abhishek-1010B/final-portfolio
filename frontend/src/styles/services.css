@@ -1,0 +1,129 @@
+#services {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000;
+    text-align: center;
+}
+
+#services h1 {
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 30px
+}
+
+.services-row {
+    display: flex;
+
+    justify-content: space-between;
+    width: 80%;
+    margin: 20px 0;
+}
+
+.service-box {
+    position: relative;
+    width: 45%;
+    height: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.8);
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    transition: transform 0.3s, filter 0.3s;
+    margin: 10px;
+}
+
+.service-box p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* Center the text */
+    color: white;
+    font-size: 1.2rem;
+    /* Default text size */
+    font-weight: bold;
+    z-index: 1;
+    /* Ensure text appears above everything */
+    text-align: center;
+}
+
+.service-box:hover {
+    transform: scale(1.05);
+    /* Slight zoom effect */
+}
+
+.service-box:hover .box-hover-text {
+    opacity: 1;
+    /* Show hover text */
+}
+
+.box-hover-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    opacity: 0;
+    z-index: 2;
+    transition: opacity 0.3s ease;
+}
+
+.service-box:hover .box-hover-text {
+    opacity: 1;
+    /* Show on hover */
+}
+
+#box-1,
+#box-3 {
+    align-self: flex-start;
+    /* Align to the left */
+}
+
+#box-2,
+#box-4 {
+    align-self: flex-end;
+    /* Align to the right */
+}
+
+#box-1 {
+    background-image: url('../components/assests/box-1.webp');
+}
+
+#box-2 {
+    background-image: url('../components/assests/box-2.jpeg');
+}
+
+#box-3 {
+    background-image: url('../components/assests/box-3.webp');
+}
+
+#box-4 {
+    background-image: url('../components/assests/box-4.jpeg');
+}
+
+@media (max-width: 768px) {
+    .services-row {
+        flex-direction: column;
+        /* Stacked layout on smaller screens */
+        align-items: center;
+        /* Center items */
+    }
+
+    .service-box {
+        width: 100%;
+        /* Full width for smaller screens */
+        height: 200px;
+        /* Adjust height */
+    }
+
+    #services h1 {
+        font-size: 2rem;
+    }
+}

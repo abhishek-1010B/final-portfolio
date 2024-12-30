@@ -4,7 +4,7 @@ import Typewriter from "typewriter-effect"; // Import Typewriter library
 import Mypic from "./assests/Abhi.JPG";
 
 const Home = () => {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [mousePosition, setMousePosition] = useState({ x: 2, y: 1 });
 
   // Update mouse position when the mouse moves
   useEffect(() => {

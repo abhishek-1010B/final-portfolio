@@ -1,18 +1,22 @@
 import React from "react";
-import "../styles/styles.css";
+import "../styles/about.css"; // Importing the new CSS file
 
 const About = () => {
   return (
-    <div className="container">
-      {/* <h1 className="about-text"> */}
-        {/* I am Abhishek Duggal, <br /> A passionate freelancer, full-stack */}
-        {/* developer. */}
-      {/* </h1> */}
-      {/* <div> */}
-        {/* <p>12th Board: Ch. Balbir Public School</p> */}
-        {/* <p>10th Board: Mount Carmel School (ICSE)</p> */}
-      {/* </div> */}
-    </div>
+    <section id="about">
+      <h1>About</h1>
+      <p>
+        My name is Abhishek Duggal, and I am a final-year undergrad at Chitkara
+        University. Currently, I am working on projects using the MERN stack
+        (MongoDB, Express, React, Node.js) and am open to freelancing
+        opportunities. I have a strong passion for full-stack web development
+        and enjoy building modern applications with the latest technologies. In
+        addition to my work, I have included some of my projects in the
+        "Projects" section, which you can explore. I have also earned
+        certifications in Machine Learning through Gemini, deepening my
+        understanding of artificial intelligence and its applications.
+      </p>
+    </section>
   );
 };
 
