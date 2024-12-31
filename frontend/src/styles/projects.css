@@ -1,0 +1,119 @@
+#projects {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    height: 100vh;
+    background-color: #000;
+    overflow: hidden;
+    text-align: center;
+}
+
+#projects h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    color: white;
+    background-color: red;
+    padding: 10px 20px;
+    margin: 20px 0;
+    text-transform: uppercase;
+    position: relative;
+    width: 100%;
+}
+
+#projects h1::before,
+#projects h1::after {
+    content: '';
+    display: inline-block;
+    height: 2px;
+    background-color: white;
+    flex: 1;
+    margin: 0 10px;
+}
+
+.project-box {
+    position: relative;
+    width: 30%;
+    height: 150px;
+    margin: 15px;
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.project-box:hover {
+    box-shadow: 10px 10px 25px rgba(255, 255, 255, 0.4);
+    transform: scale(1.05);
+    /* Slight zoom on hover */
+}
+
+#projects .bubble {
+    position: absolute;
+    background-color: white;
+    opacity: 0.2;
+    border-radius: 50%;
+    animation: float 8s infinite ease-in-out;
+}
+
+#projects .bubble:nth-child(1) {
+    width: 80px;
+    height: 80px;
+    left: 10%;
+    animation-duration: 6s;
+}
+
+#projects .bubble:nth-child(2) {
+    width: 100px;
+    height: 100px;
+    left: 50%;
+    animation-duration: 7s;
+}
+
+#projects .bubble:nth-child(3) {
+    width: 60px;
+    height: 60px;
+    left: 80%;
+    animation-duration: 5s;
+}
+
+#projects .bubble:nth-child(4) {
+    width: 120px;
+    height: 120px;
+    left: 30%;
+    animation-duration: 9s;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 0.3;
+    }
+
+    50% {
+        opacity: 0.6;
+    }
+
+    100% {
+        transform: translateY(-100vh) scale(0.8);
+        opacity: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .project-box {
+        width: 90%;
+        /* Stack boxes for smaller screens */
+    }
+}
