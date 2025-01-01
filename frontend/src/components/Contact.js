@@ -1,21 +1,54 @@
 import React from "react";
-import "../styles/styles.css";
+import "../styles/contact.css";
 
 const Contact = () => {
   return (
-    <div className="container">
-      <form>
-        <label>Name:</label>
-        <input type="text" placeholder="Your Name" />
-        <label>Location:</label>
-        <input type="text" placeholder="Your Location" />
-        <label>Time Limit:</label>
-        <select>
-          <option>4-5 days (Urgent, extra charges)</option>
-          <option>10-15 days</option>
-          <option>15-20 days</option>
-          <option>30 days</option>
-        </select>
+    <div id="contact">
+      <h1>Contact Me</h1>
+      <form id="contact-form">
+        <div className="form-group">
+          <label htmlFor="name">Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter your name"
+            required
+          />
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="reason">Reason</label>
+          <select id="reason" name="reason" required>
+            <option value="">Select a reason</option>
+            <option value="website-designing">Website Designing</option>
+            <option value="hire-me">Hire Me</option>
+          </select>
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+          />
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="description">Description</label>
+          <textarea
+            id="description"
+            name="description"
+            placeholder="Enter your message"
+            rows="4"
+            required
+          ></textarea>
+        </div>
+
+        <button type="submit">Submit</button>
       </form>
     </div>
   );

@@ -1,0 +1,84 @@
+#contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #a11a1c;
+    /* Light purple background */
+    padding: 50px 20px;
+}
+
+#contact h1 {
+    font-size: 2.5rem;
+    color: #f5f1f2;
+    /* Dark purple text */
+    margin-bottom: 30px;
+}
+
+#contact-form {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+label {
+    font-size: 1rem;
+    color: #eae5f0;
+    /* Purple shade */
+    margin-bottom: 8px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #fff;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #e9d6f6;
+    /* Purple focus color */
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    color: white;
+    background-color: #6a1b9a;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #e02326;
+}
+
+textarea {
+    resize: none;
+    /* Prevent resizing */
+}
+
+@media (max-width: 768px) {
+    #contact-form {
+        width: 90%;
+    }
+}
